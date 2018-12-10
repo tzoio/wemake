@@ -1,0 +1,173 @@
+
+#menu, label
+{
+  display: none;
+}
+#logo-header
+{
+  margin: 0 0 0 20%;
+  padding: 0;
+  width: auto;
+  height: 90px;
+  float: left;
+}
+.menu
+{
+  margin: 35px 20% 35px 0;
+  padding: 0;
+  float: right;
+  list-style: none;
+}
+.menu > li
+{
+  margin: 0 15px;
+  float: left;
+  line-height: 20px;
+  color: #fff;
+}
+.menu > li > a
+{
+  text-decoration: none;
+  color: #fff;
+}
+.menu > li:hover a
+{
+  text-shadow: 2px 2px 4px #111;
+  cursor: pointer;
+}
+.menu > li:hover .submenu
+{
+  opacity: 1;
+  visibility: visible;
+}
+.submenu
+{
+  margin: 10px;
+  padding: 0;
+  position: absolute;
+  list-style: none;
+  background-color: $dark-blue;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s;
+}
+.submenu > li
+{
+  margin: 0;
+  padding: 10px 30px;
+  border-bottom: 1px solid $red;
+}
+.submenu > li:last-child
+{
+  border-bottom: none;
+}
+.submenu > li > a
+{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #fff;
+}
+.submenu > li > a:hover
+{
+  color: $red;
+}
+footer
+{
+  margin: 0;
+  padding: 20px 0;
+  width: 100%;
+  height: 176px;
+  clear: both;
+  background-color: $light-gray;
+}
+.first-footer
+{
+  width: 33%;
+  height: inherit;;
+  float: left;
+}
+.first-footer #logo-footer
+{
+  margin: 60px 5% 60px 20%;
+  padding: 0;
+  width: auto;
+  height: 56px;
+  float: left;
+}
+.first-footer p
+{
+  margin: 60px 0;
+  padding: 0;
+  font-size: smaller;
+  line-height: 56px;
+}
+.second-footer
+{
+  width: 23%;
+  height: auto;
+  float: left;
+}
+.second-footer h4
+{
+  padding: 0;
+  margin: 15px auto;
+  width: 50%;
+  text-align: right;
+}
+.second-footer ul
+{
+  margin: 0 auto;
+  padding: 0;
+  width: 50%;
+  list-style: none;
+  text-align: right;
+}
+.second-footer ul li
+{
+  margin: 10px 0;
+  padding: 0;
+}
+.second-footer ul li a
+{
+  text-decoration: none;
+  color: $light-blue;
+  transition: all .2s;
+}
+.second-footer ul li a:hover
+{
+  margin-right: 10px;
+  color: $red;
+}
+.third-footer
+{
+  width: 43%;
+  height: auto;
+  float: left;
+}
+.third-footer h4
+{
+  margin: 15px auto;
+  padding: 0;
+  width: 70%;
+}
+.third-footer form
+{
+  margin: auto;
+  padding: 0;
+  width: 70%;
+}
+.third-footer input[type="text"]
+{
+  padding: 10px;
+  width: 65%;
+  border: 1px solid $red;
+}
+.third-footer input[type="submit"]
+{
+  padding: 10px 20px;
+  width: 25%;
+  border: 1px solid $red;
+  background-color: $red;
+  color: #fff;
+}

@@ -1,0 +1,82 @@
+#equipe
+{
+  margin: 4% auto;
+  padding: 0;
+  width: 80%;
+  text-align: left;
+}
+#equipe h2
+{
+  font-size: 2em;
+}
+#equipe p
+{
+  text-align: justify;
+  color: $light-blue;
+  font-size: 1.1em;
+}
+#equipe .images
+{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+}
+#equipe .images li
+{
+  margin: 1% 1px;
+  padding: 0;
+  width: 19.8%;
+  height: 200px;
+  float: left;
+  background-color: $red;
+}
+#equipe .images li:first-child
+{
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+#equipe article
+{
+  margin: 25px 0;
+  text-align: left;
+}
+#equipe article h3
+{
+  margin: 0;
+  clear: both;
+  font-size: 2em;
+}
+#equipe article h4
+{
+  margin-top: 0;
+  font-size: 1.25em;
+  color: $red;
+}
+#equipe article p
+{
+  margin: 0;
+  width: 40%;
+}
+
+/* IMAGENS AQUI */
+
+#equipe #employee-1 li:nth-child(1){}
+#equipe #employee-1 li:nth-child(2){}
+#equipe #employee-1 li:nth-child(3){}
+#equipe #employee-1 li:nth-child(4){}
+#equipe #employee-1 li:nth-child(5){}
+
+#equipe #employee-2 li:nth-child(1){}
+#equipe #employee-2 li:nth-child(2){}
+#equipe #employee-2 li:nth-child(3){}
+#equipe #employee-2 li:nth-child(4){}
+#equipe #employee-2 li:nth-child(5){}
+
+#equipe #employee-3 li:nth-child(1){}
+#equipe #employee-3 li:nth-child(2){}
+#equipe #employee-3 li:nth-child(3){}
+#equipe #employee-3 li:nth-child(4){}
+#equipe #employee-3 li:nth-child(5){}
+
+/* ... */

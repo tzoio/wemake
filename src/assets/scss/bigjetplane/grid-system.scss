@@ -1,0 +1,67 @@
+
+.container {
+	@extend %center-x;
+	width: $desktop;
+	padding: 0 $gutter;
+}
+
+.container-fluid {
+	padding: auto $gutter/2;
+	margin: auto;
+}
+
+.for-grid {
+	@extend %clearfix;
+	margin: auto  #{-$gutter};
+}
+
+@for $i from 1 through 16 {
+	.col-d-#{$i} {
+		width: ($desktop / 16)*$i;
+	}
+
+	.col-d-fluid {
+		width: 100% !important;
+	}
+}//fecha for
+
+[class*="col-"] {
+	@extend %column;
+}
+
+@media #{$mq-tablet} {
+	@for $i from 1 through 16 {
+		.col-d-#{$i},
+		.col-t-#{$i} {
+			width: ($tablet / 16)*$i;
+		}
+	}//fecha for do grid
+
+	.col-t-fluid {
+		width: 100% !important;
+	}
+
+	.container {
+		width: $tablet;
+	}
+}
+
+@media #{$mq-mobile} {
+	@for $i from 1 through 16 {
+		.col-d-#{$i},
+		.col-t-#{$i},
+		.col-m-#{$i} {
+			width: ($mobile / 16)*$i;
+		}
+	}//fecha for do grid
+
+	.col-m-fluid {
+		width: 100% !important;
+	}
+
+	.container {
+		width: $mobile;
+		
+	}//fecha container
+}
+

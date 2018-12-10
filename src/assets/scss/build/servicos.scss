@@ -1,0 +1,62 @@
+@import '../bigjetplane/variables';
+@import '../bigjetplane/mixins';
+@import '../bigjetplane/placeholders';
+
+@import 'comp/variables';
+@import 'comp/mixins';
+@import 'comp/placeholders';
+@import 'comp/fonts';
+
+.aptidoes {
+	li {
+		@extend %font-color-gray;
+		@extend %relative;
+		font-size: 26px;
+		font-weight: bold;
+		padding-left: 45px;
+		margin: 15px auto;
+
+		&::before {
+			@extend %inline-block;
+			@extend %absolute;
+			left: 0;
+			content: ' ';
+			width: 30px;
+			height: 30px;
+			background-size: 50%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url('img/star.svg');
+		}
+
+	}//li
+}//.aptidoes
+
+.right {
+	float: right;
+	text-align: right;
+	width: 100%;
+
+	.title {
+		&::after {
+			@extend %absolute;
+			left: auto;
+			right: 0;
+			bottom: auto;
+			// float: right;
+			
+		}
+	}
+
+	.aptidoes li {
+		padding: 0;
+		padding-right: 45px;
+
+
+		&::before {
+			left: auto;
+			right: 0;
+		}
+	}//.aptidoes li
+}
+

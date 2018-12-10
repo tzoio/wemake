@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|PT+Serif");
+.aptidoes li::before {
+  display: inline-block; }
+
+.aptidoes li {
+  position: relative; }
+
+.aptidoes li::before, .right .title::after {
+  position: absolute; }
+
+.aptidoes li {
+  color: #5b5d5f; }
+
+.aptidoes li {
+  font-size: 26px;
+  font-weight: bold;
+  padding-left: 45px;
+  margin: 15px auto; }
+  .aptidoes li::before {
+    left: 0;
+    content: ' ';
+    width: 30px;
+    height: 30px;
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("img/star.svg"); }
+
+.right {
+  float: right;
+  text-align: right;
+  width: 100%; }
+  .right .title::after {
+    left: auto;
+    right: 0;
+    bottom: auto; }
+  .right .aptidoes li {
+    padding: 0;
+    padding-right: 45px; }
+    .right .aptidoes li::before {
+      left: auto;
+      right: 0; }

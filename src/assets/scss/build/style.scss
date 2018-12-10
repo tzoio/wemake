@@ -1,0 +1,150 @@
+@import '../bigjetplane/variables';
+@import '../bigjetplane/mixins';
+@import '../bigjetplane/placeholders';
+@import '../bigjetplane/bigjetplane';
+
+@import 'comp/variables';
+@import 'comp/mixins';
+@import 'comp/placeholders';
+@import 'comp/fonts';
+@import 'comp/header';
+@import 'comp/footer';
+
+* {
+	@extend %clearfix;
+}
+
+body {
+	@extend %font-serif;
+	text-rendering: optimizeLegibility !important;
+	font-smoothing: antialiased !important;
+	
+}
+
+section {
+	padding-top: 50px;
+	background-color: $white;
+}
+
+p:not(.scape) {
+	@extend %font-color-gray;
+	font-size: 1.8rem;
+	margin: 15px 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+.title {
+	@extend %font-sans-serif;
+	@extend %font-color-dark-gray;
+	@extend %relative;
+	font-size: 3.5rem;
+	margin-top: 6rem;
+	padding-bottom: 1rem;
+	margin-bottom: 2rem;
+
+	&::after {
+		@extend %line-after;
+
+	}
+
+	&.title-less-margin {
+		margin-bottom: 1rem;
+
+	}
+
+	@media #{$mq-mobile} {
+		text-align: center;
+
+		&::after {
+			margin: 0 auto;
+		}
+	}
+}
+
+.subtitle {
+	@extend %font-serif;
+	@extend %font-color-gray;
+	@extend %relative;
+	font-size: 2.5rem;
+	margin-top: 1rem;
+	margin-bottom: 3rem;
+}
+
+
+
+.navigator {
+	background-color: $gray;
+	padding: 5px;
+	border-radius: 12px;
+	position: fixed;
+	right: 30px;
+	top: 40%;
+
+	a {
+		@extend %block;
+		@extend %relative;
+		margin: 5px 0;
+
+		* {
+			@extend %inline-block;
+		}
+
+		span:not(.circle) {
+			@extend %absolute;
+			@extend %font-sans-serif;
+			@extend %none;
+			color: $dark-gray;
+			font-size: 1.5rem;
+			text-align: center;
+			right: 25px;
+			min-width: 70px;
+		}
+
+		span.circle {
+			@extend %pointer;
+
+			svg {
+				width: 15px;
+				height: 15px;
+			}
+		}
+
+		&:hover {
+			span:not(.circle) {
+				@extend %block;
+			}
+		}
+
+
+		&::after {
+			@extend %block;
+			@extend %absolute;
+			content: ' ';
+			background-color: $dark-gray;
+			width: 1.5px;
+			height: 26px;
+			left: 6.25px;
+			bottom: -23px;
+		}
+	}//a
+
+	li:last-of-type a::after {
+		@extend %none;
+	}
+
+	@media #{$mq-mobile} {
+		display: none;
+	}
+
+}//.navigator
+
+@media #{$mq-tablet} {
+
+}
+
+@media #{$mq-mobile} {
+
+}

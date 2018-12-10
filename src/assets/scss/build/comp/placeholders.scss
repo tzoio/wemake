@@ -1,0 +1,39 @@
+%background-red {
+	background-color: $red;
+}
+
+%background-dark-gray {
+	background-color: $dark-gray;
+}
+
+%background-gray {
+	background-color: $gray;
+}
+
+%font-sans-serif {
+	@include font-family('Fjalla One', sans-serif);
+}
+
+%font-serif {
+	@include font-family('PT Serif', serif);
+}
+
+%scale {
+	transform: scale(1.1);
+}
+
+%font-color-red {
+	color: $red;
+}
+
+%font-color-gray {
+	color: $gray;
+}
+
+%font-color-dark-gray {
+	color: $dark-gray;
+}
+
+%line-before, %line-after {
+	@include line(60px, 5px);
+}

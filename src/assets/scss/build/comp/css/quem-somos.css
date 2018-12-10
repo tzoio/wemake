@@ -1,0 +1,74 @@
+aside
+{
+  margin: 4% 0;
+  padding: 0;
+  width: 25%;
+  position: fixed;
+  float: left;
+  text-align: right;
+  background-color: #fff;
+}
+aside ul
+{
+  list-style: none;
+}
+aside ul li
+{
+  margin: 10px 0;
+  padding: 0;
+  text-transform: uppercase;
+
+}
+aside ul li a
+{
+  text-decoration: none;
+  color: #000;
+  transition: all .2s;
+}
+aside ul li a:hover
+{
+  margin-right: 10px;
+  color: $red;
+}
+aside ul li .active
+{
+  margin-right: 10px;
+  color: $red;
+}
+aside ul li .active::before
+{
+  content: "\2192";
+  margin: 0 5px;
+}
+
+#quem-somos-main
+{
+  margin: 4% 20%;
+  padding: 0 4%;
+  width: 45%;
+  float: right;
+  border-left: 2px solid $red;
+}
+#quem-somos-main article
+{
+  clear: both;
+  text-align: justify;
+}
+#quem-somos-main h2
+{
+  margin: 0;
+  font-size: 2em;
+}
+#quem-somos-main h3
+{
+  margin: 0;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 1em;
+  color: $red;
+}
+#quem-somos-main p
+{
+  font-size: 1.1em;
+  color: $light-blue;
+}

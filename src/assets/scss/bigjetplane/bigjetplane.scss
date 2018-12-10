@@ -1,0 +1,219 @@
+@import 'normalize';
+@import 'reset';
+@import 'variables';
+@import 'grid-system';
+@import 'mixins';
+@import 'placeholders';
+
+
+/*******************************************/
+/*				Helpers 				   */
+/*******************************************/
+
+.pull-right{
+	@extend %float-right;
+}
+.pull-left{
+	@extend %float-left;
+}
+
+.font-roboto{
+	@extend %font-roboto;
+}
+
+.center-block {
+	@extend %block;
+	@extend %center-x;
+	@extend %clearfix;
+}
+
+.clearfix {
+	@extend %clearfix; 
+}
+
+.no-float {
+	@extend %float-none;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+/*******************************************/
+/*				Base do projeto			   */
+/*******************************************/
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body{
+	@extend %font-roboto;
+	font-size: 1.5rem;
+}
+
+hr {
+	border: 0;
+	background-color: $white;
+	min-height: 1px;
+	width: 100%;
+}
+
+button {
+	border: 0;
+}
+
+.black {
+	background-color: transparentize($black, 0.5);
+	border: 1px $black solid;
+	min-height: 5rem;
+	margin-bottom: 1rem;
+}
+
+a {
+	color: inherit;
+}
+/*******************************************/
+/*				Components 				   */
+/*******************************************/
+
+
+
+
+.navbar {
+	@extend %block;
+	@extend %relative;
+	@include min-height(50px);
+	margin-bottom: $gutter;
+
+	.navbar-mobile-container {
+		@extend %float-right;
+		@extend %none;
+		@extend %border-radius-5;
+		justify-content: center;
+		height: 100%;
+		
+		.navbar-mobile {
+			@extend %pointer;
+			margin: 5px;
+			padding: 2px;
+			border: 1px solid $light-gray;
+			width: 30px;
+
+			.navbar-mobile-row {
+				@extend %block;
+				height: 4px;
+				margin: 2px 3px;
+				background-color: $light-gray;
+			}
+		}//fecha navbar-mobile
+
+		.navbar-mobile-nav {
+			.navbar-item {
+				width: 100%;
+			}
+		}
+
+		.show {
+			display: block !important;
+		}
+	}
+
+	.navbar-head {
+		@extend %inline-block;
+
+		.navbar-logo {
+			margin: .5rem;
+			height: 50px;
+			
+			> img {
+				@extend %block;
+				height: 100%;
+				width: auto;
+			}
+		}
+	}
+}
+
+
+.form {
+	@extend %block;
+
+	> .form-group {
+
+		> label {
+			@extend %block;
+			margin: 3px;
+		}
+
+		> .form-control {
+			@extend %border-radius-5;
+			@extend %block;
+			border: 1px solid $black;
+		}
+
+		> textarea.form-control {
+			@include min-height(80px);
+			@include max-width(100%);
+
+			&::-webkit-scrollbar {
+				width: $gutter/4;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				@extend %border-radius-5;
+				margin: 5px;
+				background-color: lighten($light-gray, 25%);
+	
+				&:hover {
+					background-color: lighten($light-gray, 15%);
+				}
+			}
+		}
+	}
+}
+
+.btn {
+	@extend %block;
+	@extend %border-radius-5;
+	@include min-width(10px);
+	border: 1px solid $black;
+	margin: $gutter/2;
+	padding: $gutter;
+
+}
+
+.checkbox {
+	@extend %relative;
+	@extend %pointer;
+	padding: $gutter;
+
+	&::before {
+		@extend %absolute;
+		content: ' ';
+		top: 0;
+		left: 0;
+		width: $gutter/2;
+		height: $gutter/2;
+		border:1px solid $black;
+	}
+}
+
+.checked {
+	&::before {
+		@extend %absolute;
+		content: ' ';
+		background-image: url('img/ok.png');
+		background-size: 80% auto;
+		background-position: center;
+		background-repeat: no-repeat;
+
+	}	
+}
+
+
+//end new scss

@@ -1,0 +1,179 @@
+%font-roboto{
+	font-family: 'Roboto', sans-serif !important;
+}
+
+%clearfix {
+	&::before,&::after {
+		content: ' ';
+		display: table;
+	}
+
+	&::after {
+		clear: both;
+	}
+}
+
+%column {
+	@extend %relative;
+	@extend %float-left;
+	@include min-height(1px);
+	padding: auto $gutter/2;
+}
+
+%block {
+	display: block;	
+}
+
+%inline-block {
+	display: inline-block;
+}
+
+%flex {
+	display: flex;
+}
+
+%none {
+	display: none;
+}
+
+%inline-flex {
+	display: inline-flex;
+}
+
+%table {
+	display: table;
+}
+
+
+%table-row {
+	display: table-row;
+}
+
+%table-cell {
+	display: table-cell;
+}
+
+%center-x {
+	margin: 0 auto;
+}
+
+%center-y-block {
+	@extend %inline-block;
+	vertical-align: middle;
+}
+
+%width-all {
+	width: 100%;
+}
+
+%float-left {
+	float: left;
+}
+
+%float-right {
+	float: right;
+}
+
+%float-none {
+	float: none;
+}
+
+%relative {
+	position: relative;
+}
+
+%absolute {
+	position: absolute;
+}
+
+%pointer {
+	cursor: pointer;
+}
+
+%bring-front {
+	z-index: 999;
+}
+
+%border-radius-5 {
+	border-radius: 5px;
+}
+
+%separator-as-div {
+	@extend %clearfix;
+	margin: 20px;
+
+	> hr {
+		@include min-height(3px);
+		@include min-width(1%);
+		border: 0;
+		background-color: $black;
+	}
+
+	span {
+		@extend %block;
+		margin: 5px;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+}
+
+%separator-as-hr {
+	@include min-height(3px);
+	@include min-width(1%);
+	background-color: $black;
+	border: 0;
+}
+
+%navbar-body {
+	@extend %float-right;
+	@extend %block;
+	@extend %clearfix;
+	height: 100%;
+
+	.navbar-item {
+		@extend %block;
+		@extend %float-left;
+		@extend %relative;
+		height: inherit;
+
+		> a {
+			@extend %inline-block;
+			height: inherit;
+			padding: 0 1rem;
+		}
+	}
+}
+
+%navbar-body-center {
+	@extend %navbar-body;
+	@extend %flex;
+	@extend %float-none;
+	justify-content: center;
+}
+
+%font-color-white {
+	color: $white;
+}
+
+%shadow {
+	box-shadow: 0 0 3px $shadow;
+}
+
+%invisible {
+	opacity: 0;
+}
+
+%transition {
+	transition: .3s;
+}
+
+%gutter-tb {
+	margin-top: $gutter;
+	margin-bottom: $gutter;
+}
+
+%r-margin {
+	margin-top: 0;
+	margin-bottom: 0;
+}

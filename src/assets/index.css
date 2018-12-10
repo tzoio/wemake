@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|PT+Serif");
+section > div a {
+  display: inline-block; }
+
+header #logo {
+  display: none; }
+
+section {
+  display: table; }
+
+section > div {
+  display: table-cell; }
+
+header {
+  position: absolute; }
+
+section > div, section > div p, section > div a {
+  color: #fff; }
+
+section > div, section > div a {
+  font-family: "Fjalla One", sans-serif !important;
+  font-style: normal;
+  font-weight: normal; }
+
+section > div h1 span {
+  color: #d90428; }
+
+header {
+  background-color: transparent; }
+  header nav {
+    margin: 0 auto; }
+    header nav ul {
+      background-color: transparent !important;
+      border: none !important; }
+
+section {
+  min-height: 650px;
+  padding-top: 0;
+  width: 100%;
+  background: url("img/bg-desktop.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center; }
+  section > div {
+    vertical-align: middle; }
+    section > div h1 {
+      font-size: 5rem;
+      font-weight: 700; }
+      section > div h1 span {
+        font-weight: inherit; }
+    section > div p {
+      font-size: 4rem;
+      margin-bottom: 15px; }
+    section > div a {
+      border-color: #292e40;
+      border-style: solid;
+      border-width: 0 0 3px 0;
+      text-transform: uppercase;
+      font-size: 2rem;
+      padding: 7px 5px;
+      margin: 15px;
+      transition: .1s; }
+      section > div a:hover {
+        border-color: #fff;
+        color: #d90428; }
+  @media only screen and (max-width: 1023px) {
+    section {
+      background-image: url("img/bg-mobile.jpg"); } }
+
+footer {
+  margin-top: 0; }

@@ -1,0 +1,77 @@
+@import '../bigjetplane/variables';
+@import '../bigjetplane/mixins';
+@import '../bigjetplane/placeholders';
+
+@import 'comp/variables';
+@import 'comp/mixins';
+@import 'comp/placeholders';
+@import 'comp/fonts';
+
+@media #{$mq-mobile} {
+	h2 {
+		text-align: center;
+	}
+}
+
+.form {
+	* {
+		@extend %block;
+
+	}
+
+	label {
+		@extend %font-sans-serif;
+		@extend %font-color-gray;
+		font-size: 1.8rem;
+		margin-bottom: 3px;
+	}
+
+	.field {
+		@extend %font-color-gray;
+		border: 2px solid $gray;
+		padding: 5px;
+		width: 100%;
+		margin-bottom: 20px;
+
+		&:focus {
+			@extend %font-color-dark-gray;
+			border-color: $dark-gray;
+
+		}
+	}
+
+	.field.text-field {
+		height: 35px;
+
+		@media #{$mq-mobile} {
+			height: 40px;
+		}
+
+	}
+
+	.field.text-area {
+		height: 100px;
+		max-height: 100px;
+		max-width: 100%;
+		resize: none;
+	}
+
+	.button-form {
+		@extend %font-sans-serif;
+		@extend %background-dark-gray;
+		@extend %font-color-white;
+		padding: 10px 15px;
+		text-transform: uppercase;
+		transition: .1s;
+
+		&:hover {
+			@extend %background-gray;
+			@extend %font-color-dark-gray;
+			letter-spacing: 2px;
+		}
+
+		@media #{$mq-mobile} {
+			margin: 0 auto;
+		}
+	}
+}

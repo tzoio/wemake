@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|PT+Serif");
+.faces-list li a, .selected:target {
+  display: block; }
+
+.faces-list li {
+  display: inline-block; }
+
+.selected {
+  display: none; }
+
+.selected h4 {
+  position: relative; }
+
+.selected h3, .selected h4 {
+  font-family: "Fjalla One", sans-serif !important;
+  font-style: normal;
+  font-weight: normal; }
+
+.selected h3 {
+  color: #d90428; }
+
+.selected h4 {
+  color: #5b5d5f; }
+
+.selected h3::after, .selected h4::after {
+  display: block;
+  position: relative;
+  content: ' ';
+  width: 60px;
+  height: 5px;
+  background-color: #292e40; }
+
+.faces-list {
+  max-width: 100%;
+  overflow: hidden; }
+  .faces-list li {
+    background-color: #000;
+    margin: 5px;
+    height: 200px;
+    width: 200px; }
+    .faces-list li a {
+      width: 100%;
+      height: 100%; }
+    @media only screen and (max-width: 767px) {
+      .faces-list li {
+        display: block;
+        margin: 5px auto; } }
+
+.selected {
+  margin-top: 30px; }
+  .selected h3 {
+    padding-top: 15px;
+    font-size: 20px; }
+    .selected h3::after {
+      width: 25px;
+      height: 3px;
+      background-color: #d90428; }
+  .selected h4 {
+    font-size: 16px;
+    padding: 10px 0; }
+    .selected h4::after {
+      width: 15px;
+      height: 2px;
+      background-color: #5b5d5f; }
+  @media only screen and (max-width: 767px) {
+    .selected h3, .selected h4, .selected p {
+      text-align: center; }
+      .selected h3::before, .selected h3::after, .selected h4::before, .selected h4::after, .selected p::before, .selected p::after {
+        display: none; } }

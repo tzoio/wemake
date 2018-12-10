@@ -1,0 +1,151 @@
+#hamb, #hamb-menu {
+	@extend %none;
+}
+
+
+header {
+  	@extend %background-red;
+  	@extend %font-sans-serif;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	//margin-bottom: 50px;
+
+  	.container {
+  		padding: $gutter/2 inherit;
+  		
+		.vertical-center {
+			@extend %relative;
+  			@extend %clearfix;
+  			@extend %flex;
+  			align-items: center;
+  			min-height: 120px;
+  			justify-content: flex-end;
+
+
+			#logo{
+				@extend %absolute;
+				transition: .1s;
+				left: 0;
+				
+				img {
+					height: 140px;
+
+				}
+
+				&:hover {
+					@extend %scale;
+				}
+			}
+
+			nav {
+
+				* {
+					@extend %center-y-block;
+				}
+
+				.menu {
+
+					a {
+						@extend %font-color-white;
+						padding: $gutter 10px;
+						font-size: 2rem;
+						transition: .1s;
+
+						&:hover {
+							@extend %font-color-dark-gray;
+							@extend %scale;
+						}
+					}
+
+					.submenu {
+						@extend %relative;
+
+						ul {
+							@extend %background-red;
+							@extend %absolute;
+							border: 2px solid $white;
+							border-top: 0;
+							padding: 2px;
+							display: none !important;
+							top: 60px;
+							left: 0;
+							width: 150px;
+
+							li {
+								@extend %block;
+								margin: 2px 0;
+
+								a {
+									@extend %block;
+									padding: 3px 10px;
+									font-size: 1.5rem !important;
+
+									
+								}
+							}
+							
+						}//ul
+					}//.submenu
+				}//.menu
+			}//nav
+		}//.vertical-center
+  	}//.container
+
+  	@media #{$mq-tablet} {
+  		.vertical-center {
+
+	  		nav {
+	  			display: none;
+	  		}
+
+	  		#hamb {
+	  			display: inline-block !important;
+	  			float: right;
+	  			width: 50px;
+	  		}
+  		}
+  	}
+}//header
+
+@media #{$mq-tablet} {
+	#hamb-menu {
+		transition: .7s;
+		padding-bottom: 5px;
+		background-color: $white;
+		color: $gray;
+		width: 100%;
+		//
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		//
+
+		li {
+			text-align: center;
+		}
+
+		li:not(.divider) {
+			padding: 5px;
+
+			&:hover {
+				a {
+					color: transparentize($gray, .5);
+					
+				}
+			}
+		}
+
+		.divider {
+			margin: 15px 0 5px 0;
+			color: $red;
+			font-family: 'Fjalla One', sans-serif;
+			&::after {
+				@include line(15px, 2px);
+				background-color: $red;
+				margin: 0 auto;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|PT+Serif");
+.form * {
+  display: block; }
+
+.form .button-form {
+  color: #fff; }
+
+.form .button-form {
+  background-color: #292e40; }
+
+.form .button-form:hover {
+  background-color: #5b5d5f; }
+
+.form label, .form .button-form {
+  font-family: "Fjalla One", sans-serif !important;
+  font-style: normal;
+  font-weight: normal; }
+
+.form label, .form .field {
+  color: #5b5d5f; }
+
+.form .field:focus, .form .button-form:hover {
+  color: #292e40; }
+
+@media only screen and (max-width: 767px) {
+  h2 {
+    text-align: center; } }
+
+.form label {
+  font-size: 1.8rem;
+  margin-bottom: 3px; }
+
+.form .field {
+  border: 2px solid #5b5d5f;
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 20px; }
+  .form .field:focus {
+    border-color: #292e40; }
+
+.form .field.text-field {
+  height: 35px; }
+  @media only screen and (max-width: 767px) {
+    .form .field.text-field {
+      height: 40px; } }
+
+.form .field.text-area {
+  height: 100px;
+  max-height: 100px;
+  max-width: 100%;
+  resize: none; }
+
+.form .button-form {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  transition: .1s; }
+  .form .button-form:hover {
+    letter-spacing: 2px; }
+  @media only screen and (max-width: 767px) {
+    .form .button-form {
+      margin: 0 auto; } }

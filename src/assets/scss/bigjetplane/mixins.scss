@@ -1,0 +1,40 @@
+@mixin x-center-absolute ($width) {
+	
+	left: ($desktop - $width)/2;
+
+	@media #{$mq-tablet} {
+		left: ($tablet - $width)/2;
+	}
+
+	@media #{$mq-mobile} {
+		left: ($mobile - $width)/2;
+	}
+
+}
+
+@mixin no-gutter() {
+	padding: auto 0;
+}
+
+@mixin font-family($font-name,$font-type) {
+	font-family: '#{$font-name}', $font-type !important;
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+@mixin min-height($h) {
+	min-height: $h;
+}
+
+@mixin min-width($w) {
+	min-width: $w;
+}
+
+@mixin max-height($h) {
+	max-height: $h;
+}
+
+@mixin max-width($w) {
+	max-width: $w;
+}
